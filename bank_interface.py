@@ -11,7 +11,7 @@ def withdraw(amount):
     withdrawal_amount = float(input("How much money do you want to withdraw? "))
     if withdrawal_amount > amount:
         print("You can't do that!")
-        return amount
+        return False
 
     else:
         amount -= withdrawal_amount
