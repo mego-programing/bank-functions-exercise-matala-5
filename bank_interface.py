@@ -35,13 +35,13 @@ def run_main():
             quit()
 
         elif action == "1":
-            print(f"Your balance is: {check_balance(bank_balance)}")
+            print(f"Your balance is: {check_balance()}")
 
         elif action == "2":
-            bank_balance = deposit(bank_balance)
+            bank_balance = deposit(amount)
 
         elif action == "3":
-            bank_balance = withdraw(bank_balance)
+            bank_balance = withdraw(amount)
             
         else:
             print("Only 1, 2, 3, or q")
