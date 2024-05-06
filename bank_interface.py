@@ -2,24 +2,24 @@ bank_balance = 0
 
 
 def deposit(amount):
-    deposit_amount = float(input("How much money do you want to deposit? "))
-    amount += deposit_amount
+    global bank_balance
+    bank_balance += amount
     return amount
 
 
 def withdraw(amount):
-    withdrawal_amount = float(input("How much money do you want to withdraw? "))
-    if withdrawal_amount > amount:
+    global bank_balance
+    if amount > bank_balance:
         print("You can't do that!")
         return False
 
     else:
-        amount -= withdrawal_amount
+        bank_balance -= amount
         return amount
 
 
-def check_balance(amount):
-    return amount
+def check_balance():
+    return global bank_balance
 
 def run_main():
     print(
