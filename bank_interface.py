@@ -4,7 +4,7 @@ bank_balance = 0
 def deposit(amount):
     global bank_balance
     bank_balance += amount
-    return amount
+    return check_balance()
 
 
 def withdraw(amount):
@@ -15,11 +15,12 @@ def withdraw(amount):
 
     else:
         bank_balance -= amount
-        return amount
+        return check_balance()
 
 
 def check_balance():
-    return global bank_balance
+    global bank_balance
+    return bank_balance
 
 def run_main():
     print(
