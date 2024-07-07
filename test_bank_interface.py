@@ -1,5 +1,5 @@
 import unittest
-from bank_interface import *
+from bank_me import *
 
 class TestBankInterface(unittest.TestCase):
     def setUp(self):
